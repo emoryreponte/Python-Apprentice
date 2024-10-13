@@ -10,6 +10,16 @@ directory ) and moves to the corners of the screen in a square pattern.
 
 import turtle
 
+
+t = turtle.Turtle()
+t.penup()
+t.shapesize(10, 10)
+for i in range(4):
+    t.goto(300, 300)
+    t.goto(-300, 300)
+    t.goto(-300, -300)
+    t.goto(300, -300)
+
 def set_background_image(window, image_name):
     """Set the background image of the turtle window to the image with the given name."""
 
@@ -25,16 +35,11 @@ def set_background_image(window, image_name):
     window.setup(image.width, image.height, startx=0, starty=0)
     window.bgpic(image_path)
 
-# Set up the screen
-import turtle                           # Tell Python we want to work with the turtle
+# Set up the screen                         # Tell Python we want to work with the turtle
 turtle.setup(width=600, height=600)     # Set the size of the window
-t = turtle.Turtle()
-                                        # Create a turtle named tina
-t.goto(295, -265)
-for i in range():
-    t.move()
-
+ # Create a turtle named tina
+               
 screen = turtle.Screen()                # Get the screen that tina is on
-set_background_image(screen, "sanic_64.png") # Set the background image of the screen
+set_background_image(screen, "moustache2.gif") # Set the background image of the screen
 
 turtle.exitonclick()      
