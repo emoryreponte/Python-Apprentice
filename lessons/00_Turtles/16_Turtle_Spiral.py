@@ -15,11 +15,11 @@ def getRandomColor():
 
 
 window = turtle.Screen()
-window.bgcolor("white")
+window.bgcolor("black")
 
 # Make a new turtle
 myTurtle = turtle.Turtle()
-
+myTurtle.goto(0,150)
 # This code sets our shape to a turtle
 myTurtle.shape("turtle")
 
@@ -39,7 +39,7 @@ for i in range(50):
     myTurtle.forward(9 * i)
 
     # Turn the turtle (360/7) degrees to the right
-    myTurtle.right(360 / 7 + i*5)
+    myTurtle.right(360 / 100 + i*5)
 
     # Change the turtle width to 'i' (the loop variable)
     myTurtle.width(i)
