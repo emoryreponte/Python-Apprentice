@@ -9,17 +9,16 @@ at the comments and the code snippets in the previous lessons, like
 
 """
 
-# Import the required modules
+from tkinter import messagebox, simpledialog, Tk # import required modules
 
-# Create a window object
+window = Tk() # Create a window object
 
-# Hide the window, hint: use the withdraw method
+window.withdraw() # Hide the window; we just want to see pop ups
 
-# Ask the user for the first number   
+a = simpledialog.askinteger(title="Hello", prompt="please enter number 1") # Ask the user for the first number   
 
-# Ask the user for the second number
+b = simpledialog.askinteger(title="Hello", prompt="please enter number 2")
 
-# Display the sum of the two numbers 
+messagebox.showinfo("its",str(a + b))# Display the sum of the two numbers 
 
-# Keep the window open
-
+window.mainloop() # Keep the window open
