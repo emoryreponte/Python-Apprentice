@@ -15,22 +15,54 @@ more help
 
 import turtle                           # Tell Python we want to work with the turtle
 turtle.setup (width=600, height=600)    # Set the size of the window
+turtle.bgcolor("black")
 
 tina = turtle.Turtle()                  # Create a turtle named tina
 
 tina.shape('turtle')                    # Set the shape of the turtle to a turtle
 tina.speed(2)                           # Make the turtle move as fast, but not too fast. 
-
+tina.goto(-125, 0)
 
 forwards = [ 30, 30, 30, 30 ]
-lefts = [ 90, 90, 90, 90]
-colors = [ "blue", "red", "green" ]
+lefts = [135, 45, 135, 45]
+colors = [ "blue", "red", "green", "yellow" ]
 
-for  i in range(8):
+for  i in range(4):
 
-    forward = forwards
-    left = lefts
-    color = colors
+    forward = forwards[i]
+    left = lefts[i]
+    color = colors[i]
+
+
+    tina.color(color)
+    tina.forward(forward)
+    tina.left(left)
+
+tina.penup()
+tina.goto(0, 0)
+tina.pendown()
+
+for  i in range(4):
+
+    forward = forwards[i]
+    left = lefts[i]
+    color = colors[i]
+
+
+    tina.color(color)
+    tina.forward(forward)
+    tina.left(left)
+
+
+tina.penup()
+tina.goto(125, 0)
+tina.pendown()
+
+for  i in range(4):
+
+    forward = forwards[i]
+    left = lefts[i]
+    color = colors[i]
 
 
     tina.color(color)
