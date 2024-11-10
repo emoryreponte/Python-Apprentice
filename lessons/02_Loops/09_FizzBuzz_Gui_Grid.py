@@ -27,12 +27,25 @@ HINT: You can use % and // to get the first and last digit of a number,
 our you can convert the number to a string and iterate over the digits
 
 """
+
+num = 1
+
 from guizero import App, Box, Text
 
 app = App("Numbers Grid", layout="grid")
 
-# Create a 10x10 grid using nested loops
-# Or you can use a single loop and calculate the row and column
+for x in range(10):
+    for y in range(10):
+        if num%15 ==0:
+            print("🐍", end = " ")
+        elif num%5 ==0:
+            print("🦡", end = " ")
+        elif num%3 ==0:
+            print("🍄", end = " ")
+        else: print(num, end = " ")
+        num += 1
+    print()
+
 
 # In the loop, calculate or increment the number
 
