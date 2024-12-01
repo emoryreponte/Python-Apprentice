@@ -32,24 +32,32 @@ at the bottom of the editor screen; this program does not use the GUI.
 
 import random
 n = random.randint(1, 100)
+while n%7 == 0:
+    n = random.randint(1, 100)
+
+
 
 def ask_integer(prompt):
-    p = prompt
     while True:
+        try:
+            p = int(input(prompt))
+        except ValueError:
+            print("Please enter a valid number!")
         if p%7 ==0:
             print("that is a very bad number, starting over ")
-        elif n >= p:
+            n = random.randint(1, 100)
+            while n%7 == 0:
+                n = random.randint(1, 100)
+        elif n < p:
             print("too high")
-        elif n <= p:
+        elif n > p:
             print("too low")
         else:
             print("cool number")
-        try:
-            return int(input(prompt))
-        except ValueError:
-            print("Please enter a valid number!")
+            break
+        
 
-ask_integer("hi")
+ask_integer("what number do you pick ")
 # Pick the random number
 
 # In your loop:
