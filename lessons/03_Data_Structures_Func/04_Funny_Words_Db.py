@@ -25,6 +25,10 @@ an error message will be displayed and new definitions will not be added.
 
 
 def add_definition(db, key, value):
+    if 5 < db.len:
+        Print("error")
+
+    db[key] = value
     """
     Add a new definition to the database.
 
