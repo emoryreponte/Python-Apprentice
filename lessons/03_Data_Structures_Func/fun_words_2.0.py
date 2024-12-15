@@ -69,17 +69,17 @@ def delete_definition(db, key):
 
 
 def is_funny(definition):
-    if "fun" in definition:
+    if "NO" in definition:
         return True
-    elif "funny" in definition:
+    elif "yippe" in definition:
         return True
-    elif "halarious" in definition:
+    elif "nope" in definition:
         return True
-    elif "amusing" in definition:
+    elif "yesnt" in definition:
         return True
-    elif "pants" in definition:
+    elif "idk" in definition:
         return True
-    elif "spleen" in definition:
+    elif "mornings" in definition:
         return True
     else:
         return False
@@ -137,7 +137,7 @@ def _add_definition():
 
     if word and definition:
         if is_funny(definition):
-            definition = "😂 " + definition + " 🤡"
+            definition = definition + " 🤡"
         add_definition(db, word, definition)
         _update_listbox(db)
         word_entry.clear()
@@ -191,4 +191,3 @@ app.when_key_pressed = handle_enter
 _update_listbox(db) # Initial update of listbox
 
 app.display()
-

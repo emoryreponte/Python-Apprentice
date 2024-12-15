@@ -1,8 +1,8 @@
 #imports
 from guizero import App, Box, PushButton, Text, info
 
-X_MARK = "X"
-O_MARK = "O"
+X_MARK = "1"
+O_MARK = "0"
 
 # Implement check_row() and check_win() to allow the game to check if a player has won
 # IMPORTANT! In your code, you should use the constants X_MARK and O_MARK instead of the strings "x" and "o"
@@ -19,6 +19,15 @@ def check_row(l):
     return None
 
 def check_win(board):
+    l = [
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', '']
+    ]
+    for row in l:
+        e == X_MARK
+        
+
     """Check if a player has won on a board
     Args:
         board: a 3x3 2D array
