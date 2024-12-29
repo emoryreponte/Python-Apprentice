@@ -1,14 +1,18 @@
 #imports
 from guizero import App, Box, PushButton, Text, info
 
-X_MARK = "1"
-O_MARK = "0"
+X_MARK = "X"
+O_MARK = "O"
 
 # Implement check_row() and check_win() to allow the game to check if a player has won
 # IMPORTANT! In your code, you should use the constants X_MARK and O_MARK instead of the strings "x" and "o"
 
 def check_row(l):
-    """Check if a player won on a row
+    for row in l:
+        if row[0] == row[1] == row[2]:
+            if row[0] != "":
+                return row[0]
+    """Check if a pl, "xyer won on a row
     Args:
         l: a 3 element iterable
         
@@ -19,13 +23,16 @@ def check_row(l):
     return None
 
 def check_win(board):
-    l = [
-        ['', '', ''],
-        ['', '', ''],
-        ['', '', '']
-    ]
-    for row in l:
-        e == X_MARK
+    winner = check_row(board)
+    transposed = list(zip(*board))
+    if winner == None:
+        winner = check_row(transposed)
+    if winner == None:
+        if board[0][0]==board[1][1]==board[2][2]:
+            if board[0][0] != "":
+                winner = board[0][0]
+    return winner
+
         
 
     """Check if a player has won on a board
