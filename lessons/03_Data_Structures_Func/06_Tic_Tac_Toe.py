@@ -10,7 +10,7 @@ O_MARK = "O"
 def check_row(l):
     for row in l:
         if row[0] == row[1] == row[2]:
-            if row[0] != "":
+            if row[0] != None:
                 return row[0]
     """Check if a pl, "xyer won on a row
     Args:
@@ -29,8 +29,12 @@ def check_win(board):
         winner = check_row(transposed)
     if winner == None:
         if board[0][0]==board[1][1]==board[2][2]:
-            if board[0][0] != "":
+            if board[0][0] != None:
                 winner = board[0][0]
+    if winner == None:
+        if board[0][2]==board[1][1]==board[2][0]:
+            if board[0][2] != None:
+                winner = board[0][2]
     return winner
 
         

@@ -83,17 +83,6 @@ def is_funny(definition):
         return True
     else:
         return False
-    """
-    Check if the definition is funny, which means it contains one of the words:
-
-        'fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen'
-
-    Args:
-        definition (str): The definition to check.
-
-    Returns:
-        bool: True if the definition contains any of the funny words, False otherwise.
-    """
     
     # Return True if the definition contains any of the funny words, False otherwise
 
