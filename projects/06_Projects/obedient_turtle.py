@@ -27,7 +27,6 @@ def sphere(turt):
 window = Tk()     # Create a window object
 window.withdraw() # Hide the window; we just want to see pop ups
 
-# Ask the user's age
 shape = simpledialog.askstring(title="Hello", prompt="please enter a shape")
 
 if shape == "square":

@@ -13,7 +13,7 @@ randNum = random.randint(0, 3)  # ;
 # 2. Print your variable to the console
 print(randNum)  # ;
 
-# 3. Get the user to enter something that they think is awesome
+# 3. Get the user to enter something that they think is awesomelife
 response = simpledialog.askstring(  # ;
     None, prompt="What is something you think is awesome?"  # ;
 )  # ;
