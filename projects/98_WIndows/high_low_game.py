@@ -6,32 +6,32 @@ import random
 window = Tk()
 window.withdraw()
 
+
+
 # 1. Change this line to give you a random number between 1 - 100.
 random_num = random.randint(1, 10)
 
-# 2. Print out the random variable that you made in step #1
-print(random_num)
-p = random_num
 # 3. Code a for loop to run steps 4-10, 10 times
-for i in range(4):
-    print(random_num)
-    # 4. Ask the user for a guess using a pop-up window, and save their response
-    def ask_integer(prompt):
+def ask_integer(prompt):
         while True:
             try:
-                p = int(input(prompt))
+                return int(input(prompt))
             except ValueError:
                 print("Please enter a valid number!")
 
-            if p == prompt:
-                print("you win")
-                sys.exit(0)
 
-            elif p > prompt:
-                print("guess to low")
+for i in range(4):
+    p = ask_integer("guss the number ")
 
-            elif p < prompt:
-                print("guess to high")
+    if p == random_num:
+        print("you win")
+        sys.exit(0)
+    elif p < random_num:
+        print("guess to low")
+    elif p > random_num:
+        print("guess to high")
+
+print ("you lose the number was " + str(random_num))
     # 5. If the guess is correct
         # 6. Win. Use 'sys.exit(0)' to end the program
 
