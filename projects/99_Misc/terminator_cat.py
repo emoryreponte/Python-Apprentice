@@ -65,9 +65,10 @@ window = turtle.Screen()
 #    d. Save the image to your computer's desktop
 #    e. Drag and drop the image into your 04_amazing_games dierctory
 
+
 # 2. Call the setBackground() function with your variable inside of the parenthesis
 #    for example, setBackground("cat.gif")
-setBackground("bigEyedCat.gif")  # ;
+setBackground("doge.jpeg")  # ;
 
 # 3. Make a new turtle
 myTurtle = turtle.Turtle()  # ;
