@@ -9,7 +9,6 @@ from tkinter import messagebox, simpledialog, Tk
 
 guests = dict()
 rooms = []
-
 menu = dict()
 menu["omllete"] = 3.50
 menu["chips"] = 1.25
@@ -41,17 +40,26 @@ def goto_reastraunt():
         if order.find(menuitem)!=-1:
             cost = menu[menuitem] 
             messagebox.showinfo(title="your cost is", message=cost)
-
+def checkout():
+    name = simpledialog.askstring(title="Hello welcome to joy hotels check out", prompt="whats your name?")
+    if name in guests.keys():
+        nights = guests[name][1]
+        costs = (nights*50) * 1.15
+        messagebox.showinfo(title="ok your total is about ", message=costs)
+        del guests[name]
+        print(guests)
+    else:
+        pass
 
 while True:
     choice = simpledialog.askstring(title="Hello welcome what do you want to do", prompt="checkin, checkout, goto_reastraunt")
 
     if choice == "checkin":
         checkin()
+        print(guests)
 
     elif choice == "goto_reastraunt":
         goto_reastraunt()
 
     elif choice == "checkout":
-        Name = simpledialog.askinteger(title="Hello welcome to joy hotels check out", prompt="whats your name?")
-        
+        checkout()
